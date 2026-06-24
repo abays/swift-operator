@@ -24,6 +24,13 @@ spec:
       kind: SwiftProxy
       name: swiftproxies.swift.openstack.org
       specDescriptors:
+      - description: Auth - Parameters related to authentication
+        displayName: Auth
+        path: auth
+      - description: ApplicationCredentialSecret - Secret containing Application Credential
+          ID and Secret
+        displayName: Application Credential Secret
+        path: auth.applicationCredentialSecret
       - description: TLS - Parameters related to the TLS
         displayName: TLS
         path: tls
@@ -47,6 +54,13 @@ spec:
       kind: Swift
       name: swifts.swift.openstack.org
       specDescriptors:
+      - description: Auth - Parameters related to authentication
+        displayName: Auth
+        path: swiftProxy.auth
+      - description: ApplicationCredentialSecret - Secret containing Application Credential
+          ID and Secret
+        displayName: Application Credential Secret
+        path: swiftProxy.auth.applicationCredentialSecret
       - description: TLS - Parameters related to the TLS
         displayName: TLS
         path: swiftProxy.tls
@@ -58,11 +72,18 @@ spec:
       - description: TLS - Parameters related to the TLS
         displayName: TLS
         path: swiftRing.tls
+      - description: TLS - Parameters related to the TLS
+        displayName: TLS
+        path: swiftStorage.tls
       version: v1beta1
     - description: SwiftStorage is the Schema for the swiftstorages API
       displayName: Swift Storage
       kind: SwiftStorage
       name: swiftstorages.swift.openstack.org
+      specDescriptors:
+      - description: TLS - Parameters related to the TLS
+        displayName: TLS
+        path: tls
       version: v1beta1
   description: OpenStack Swift operator
   displayName: Swift operator
